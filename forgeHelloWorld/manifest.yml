@@ -1,0 +1,18 @@
+permissions:
+  scopes:
+    - 'read:confluence-content.summary'
+    - 'read:confluence-content.all'
+    - 'read:jira-user'
+    - 'read:jira-work'
+    - 'write:jira-work'
+modules:
+  trigger:
+    - key: page-view-event
+      function: main
+      events:
+        - avi:confluence:viewed:page
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/c5adc145-be9e-43a8-acf7-b05a5cadf22f
