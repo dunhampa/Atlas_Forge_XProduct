@@ -11,8 +11,11 @@ modules:
       function: main
       events:
         - avi:confluence:viewed:page
+        - avi:confluence:created:page
+        - avi:confluence:updated:page
   function:
     - key: main
       handler: index.run
 app:
   id: ari:cloud:ecosystem::app/c5adc145-be9e-43a8-acf7-b05a5cadf22f
+
