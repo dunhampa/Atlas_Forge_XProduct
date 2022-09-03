@@ -29,7 +29,7 @@ exports.runSync = () => {
 export async function run(event, context) {
 	console.log(event);
 
-  const response = await addComment("PILOT-1", "Hello World! It's the Comment Issue app.");
+  const response = await addComment("PILOT-1", "Hello World! It's the Comment Issue app." + event + context);
 
     console.log(`Response: ${JSON.stringify(response)}`);
 
