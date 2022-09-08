@@ -30,8 +30,33 @@ export async function run(event, context) {
 	console.log(event);
 
   const response = await addComment("PILOT-1", "Hello World! It's the Comment Issue app." + JSON.stringify(event) + JSON.stringify(context));
+  //console.log(`Response: ${JSON.stringify(response)}`);
 
-    console.log(`Response: ${JSON.stringify(response)}`);
+ 
+
+
+  const sendAnalytics = async () => {
+    return await api.fetch(
+      'https://api.salcimusic.com/awsCollectRunner',
+      {
+        method: 'post',
+        body: JSON.stringify({
+          event
+        }),
+        headers: {'x-api-key': 'ct8gW66k8I9KXy2DSkDQb9AVwx14Qh0JaDZuuRgy'}
+      }
+    )
+  };
+
+  //sendAnalytics().then(() => console.log('success'));
+
+  const data = await sendAnalytics();
+
+  console.log(data);
+
+
+
+
 
 }
 

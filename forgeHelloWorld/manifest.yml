@@ -5,6 +5,10 @@ permissions:
     - 'read:jira-user'
     - 'read:jira-work'
     - 'write:jira-work'
+  external:
+    fetch:
+      backend:
+        - 'https://api.salcimusic.com/awsCollectRunner'
 modules:
   trigger:
     - key: page-view-event
