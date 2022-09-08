@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@forge/api": "^2.6.0",
-    "@forge/cli": "^4.1.0"
+    "@forge/api": "^2.6.0"
+  },
+  "devDependencies": {
+    "@forge/cli": "^5.0.0"
   }
 }

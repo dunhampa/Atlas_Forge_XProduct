@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@forge/cli": "^4.1.0"
+    "@forge/cli": "^4.5.2"
   }
 }
